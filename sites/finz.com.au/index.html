@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Finz — Surf Fins Made for Australian Waves | finz.com.au</title>
+<meta name="description" content="Finz is a ready-to-launch Australian surf fin brand. The brand and finz.com.au domain are available for acquisition.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#062C43; --deep:#041E2E; --teal:#00A6A6; --sand:#F2E3C6; --sunset:#FF7B39; --foam:#F8F5EE;
+    --radius:18px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:"Archivo",system-ui,sans-serif;background:var(--foam);color:var(--navy);line-height:1.6}
+  a{color:inherit}
+  .wrap{max-width:1160px;margin:0 auto;padding:0 20px}
+  h1,h2,h3,.logo{font-family:"Archivo Black",sans-serif;line-height:1;text-transform:uppercase;letter-spacing:-.01em}
+
+  .sale-bar{background:var(--sunset);color:#fff;text-align:center;font-weight:700;font-size:.9rem;padding:10px 16px}
+  .sale-bar a{text-decoration:underline}
+
+  .hero{background:linear-gradient(180deg,var(--navy) 0%,#0B4766 70%,var(--teal) 100%);color:var(--foam);position:relative;overflow:hidden}
+  nav{display:flex;justify-content:space-between;align-items:center;padding:22px 0;position:relative;z-index:2}
+  .logo{font-size:1.8rem;display:flex;align-items:center;gap:10px;text-decoration:none}
+  .logo svg{width:34px;height:40px}
+  nav ul{display:flex;gap:28px;list-style:none;font-weight:700;text-transform:uppercase;font-size:.85rem;letter-spacing:.08em}
+  nav ul a{text-decoration:none}
+  .hero-inner{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding:50px 0 160px;position:relative;z-index:2}
+  .hero h1{font-size:clamp(3rem,7.5vw,6.2rem)}
+  .hero h1 span{color:var(--sunset)}
+  .hero p{font-size:1.2rem;opacity:.85;max-width:480px;margin:24px 0 30px}
+  .btn{display:inline-block;padding:15px 28px;border-radius:6px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;font-size:.88rem;text-decoration:none;transition:transform .15s}
+  .btn:hover{transform:translateY(-2px)}
+  .btn-sun{background:var(--sunset);color:#fff}
+  .btn-out{border:2px solid var(--foam);margin-left:10px}
+  .fin-hero{display:flex;justify-content:center}
+  .fin-hero svg{width:min(320px,80%);filter:drop-shadow(0 30px 40px rgba(0,0,0,.35))}
+  .waves{position:absolute;bottom:-2px;left:0;width:100%;height:140px;z-index:1}
+
+  section{padding:90px 0}
+  .eyebrow{color:var(--teal);font-weight:700;text-transform:uppercase;letter-spacing:.16em;font-size:.8rem;margin-bottom:12px}
+  h2{font-size:clamp(2.2rem,4.5vw,3.4rem);margin-bottom:18px}
+  .lead{font-size:1.15rem;max-width:620px;opacity:.8}
+
+  .range{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:46px}
+  .model{background:#fff;border-radius:var(--radius);overflow:hidden;box-shadow:0 12px 30px rgba(6,44,67,.08)}
+  .model .art{height:220px;display:flex;align-items:center;justify-content:center}
+  .model .art svg{height:160px}
+  .model .body{padding:24px}
+  .model h3{font-size:1.5rem;margin-bottom:6px}
+  .model .meta{font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--teal);margin-bottom:10px}
+  .model p{opacity:.8;font-size:.95rem}
+  .bars{margin-top:16px;font-size:.8rem;font-weight:700}
+  .bar{display:flex;align-items:center;gap:10px;margin-top:6px}
+  .bar span{width:70px}
+  .bar i{flex:1;height:6px;background:#E6EEF2;border-radius:3px;position:relative}
+  .bar i b{position:absolute;inset:0 auto 0 0;background:var(--teal);border-radius:3px}
+
+  .ethos{background:var(--navy);color:var(--foam)}
+  .ethos-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;margin-top:46px}
+  .ethos-grid h3{font-size:1.25rem;color:var(--sand);margin:14px 0 8px}
+  .ethos-grid p{opacity:.8}
+  .ethos-grid .n{font-family:"Archivo Black";font-size:3rem;color:var(--sunset)}
+
+  .kit{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:46px}
+  .card{background:#fff;border-radius:var(--radius);padding:28px}
+  .card h3{font-family:"Archivo";font-weight:700;font-size:.82rem;letter-spacing:.14em;opacity:.6;margin-bottom:18px}
+  .logos{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .logos div{height:120px;border-radius:12px;display:flex;align-items:center;justify-content:center;gap:10px;font-family:"Archivo Black";font-size:1.9rem;text-transform:uppercase}
+  .logos svg{width:30px;height:36px}
+  .swatches{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
+  .sw{height:96px;border-radius:12px;display:flex;align-items:flex-end;padding:8px;font-size:.68rem;font-weight:700}
+  .card li{margin:0 0 10px 18px;opacity:.8}
+
+  .sale{background:var(--sand);border-radius:24px;padding:60px;display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:center;border:3px solid var(--navy)}
+  .sale ul{list-style:none}
+  .sale li{padding:12px 0;border-bottom:2px dashed rgba(6,44,67,.2);font-weight:700}
+  .sale li::before{content:"→ ";color:var(--sunset)}
+  .sale p{margin:14px 0 24px}
+  .sale .btn{background:var(--navy);color:#fff}
+  .fine{font-size:.82rem;opacity:.7;margin-top:16px!important}
+
+  footer{background:var(--deep);color:var(--sand);padding:34px 0;font-size:.88rem}
+  footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;opacity:.8}
+
+  @media (max-width:900px){
+    .hero-inner,.kit,.sale{grid-template-columns:1fr}
+    .range,.ethos-grid{grid-template-columns:1fr}
+    nav ul{display:none}
+    .sale{padding:34px 22px}
+    .btn-out{margin:10px 0 0}
+    .swatches{grid-template-columns:repeat(3,1fr)}
+  }
+</style>
+</head>
+<body>
+
+<div class="sale-bar">This brand is for sale: finz.com.au plus the full Finz identity. <a href="#acquire">Make an offer →</a></div>
+
+<div class="hero">
+  <div class="wrap">
+    <nav>
+      <a class="logo" href="#">
+        <svg viewBox="0 0 34 40" aria-hidden="true"><path d="M4 38C6 22 12 8 30 2c-5 9-6 22-2 36z" fill="#FF7B39"/><path d="M10 38c2-10 6-19 14-25-2 8-2 17 0 25z" fill="#F8F5EE" opacity=".35"/></svg>
+        Finz
+      </a>
+      <ul>
+        <li><a href="#range">Range</a></li>
+        <li><a href="#ethos">Ethos</a></li>
+        <li><a href="#brand">Brand kit</a></li>
+        <li><a href="#acquire">Acquire</a></li>
+      </ul>
+    </nav>
+    <div class="hero-inner">
+      <div>
+        <h1>Built for <span>our</span> swell.</h1>
+        <p>Performance surfboard fins designed and tested on Australian breaks, from mushy beachies to heavy reef slabs.</p>
+        <a class="btn btn-sun" href="#range">Shop the range</a><a class="btn btn-out" href="#acquire">Buy this brand</a>
+      </div>
+      <div class="fin-hero" aria-hidden="true">
+        <svg viewBox="0 0 200 240"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FF7B39"/><stop offset="1" stop-color="#F2E3C6"/></linearGradient></defs><path d="M20 230C30 140 70 50 180 10c-30 60-34 140-10 220z" fill="url(#g)"/><path d="M60 230c10-60 34-110 90-150-12 46-12 100 0 150z" fill="#062C43" opacity=".12"/><rect x="40" y="222" width="120" height="14" rx="4" fill="#041E2E"/></svg>
+      </div>
+    </div>
+  </div>
+  <svg class="waves" viewBox="0 0 1440 140" preserveAspectRatio="none" aria-hidden="true"><path d="M0 70c120-40 240-40 360 0s240 40 360 0 240-40 360 0 240 40 360 0v70H0z" fill="#F8F5EE"/></svg>
+</div>
+
+<section id="range">
+  <div class="wrap">
+    <div class="eyebrow">The range</div>
+    <h2>Three templates. Every break.</h2>
+    <p class="lead">Each Finz template is tuned for a different kind of wave and works with both single and dual tab systems.</p>
+    <div class="range">
+      <div class="model">
+        <div class="art" style="background:#E3F4F4"><svg viewBox="0 0 120 160"><path d="M10 155C16 95 40 35 110 8c-18 40-20 95-6 147z" fill="#00A6A6"/></svg></div>
+        <div class="body"><div class="meta">Beach breaks</div><h3>The Beachie</h3><p>Loose and forgiving for small, punchy days. Easy speed and quick release.</p>
+          <div class="bars"><div class="bar"><span>Drive</span><i><b style="width:55%"></b></i></div><div class="bar"><span>Pivot</span><i><b style="width:90%"></b></i></div><div class="bar"><span>Hold</span><i><b style="width:50%"></b></i></div></div></div>
+      </div>
+      <div class="model">
+        <div class="art" style="background:#FFEDE3"><svg viewBox="0 0 120 160"><path d="M10 155C18 90 46 30 112 6c-14 46-14 100 -4 149z" fill="#FF7B39"/></svg></div>
+        <div class="body"><div class="meta">Point breaks</div><h3>The Point</h3><p>A long, drawn-out template for big carves down a peeling right-hander.</p>
+          <div class="bars"><div class="bar"><span>Drive</span><i><b style="width:85%"></b></i></div><div class="bar"><span>Pivot</span><i><b style="width:60%"></b></i></div><div class="bar"><span>Hold</span><i><b style="width:75%"></b></i></div></div></div>
+      </div>
+      <div class="model">
+        <div class="art" style="background:#E2E8EC"><svg viewBox="0 0 120 160"><path d="M14 155C20 100 44 40 104 10c-10 50-8 100 0 145z" fill="#062C43"/></svg></div>
+        <div class="body"><div class="meta">Reef &amp; slab</div><h3>The Bombie</h3><p>Upright and stiff for maximum hold when it's heavy, hollow and serious.</p>
+          <div class="bars"><div class="bar"><span>Drive</span><i><b style="width:75%"></b></i></div><div class="bar"><span>Pivot</span><i><b style="width:40%"></b></i></div><div class="bar"><span>Hold</span><i><b style="width:95%"></b></i></div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="ethos" id="ethos">
+  <div class="wrap">
+    <div class="eyebrow">Ethos</div>
+    <h2>Shaped by salt water.</h2>
+    <div class="ethos-grid">
+      <div><div class="n">01</div><h3>Coast-tested</h3><p>Every template is ridden on Australian waves before it goes to production.</p></div>
+      <div><div class="n">02</div><h3>Recycled core</h3><p>Built around a recycled composite core, with plastic-free packaging.</p></div>
+      <div><div class="n">03</div><h3>Lifetime tabs</h3><p>Snapped a tab? We'll replace it. Fins are for surfing, not landfill.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="brand">
+  <div class="wrap">
+    <div class="eyebrow">Brand identity concept</div>
+    <h2>The Finz brand kit</h2>
+    <p class="lead">Bold, salty and sun-bleached. The fin mark doubles as a wave and works on fins, boardshorts, wax and wetsuits.</p>
+    <div class="kit">
+      <div class="card">
+        <h3>LOGO</h3>
+        <div class="logos">
+          <div style="background:var(--navy);color:var(--foam)"><svg viewBox="0 0 34 40"><path d="M4 38C6 22 12 8 30 2c-5 9-6 22-2 36z" fill="#FF7B39"/></svg>Finz</div>
+          <div style="background:var(--sunset);color:#fff">Finz</div>
+          <div style="background:var(--sand);color:var(--navy)"><svg viewBox="0 0 34 40"><path d="M4 38C6 22 12 8 30 2c-5 9-6 22-2 36z" fill="#062C43"/></svg></div>
+          <div style="background:var(--teal);color:#fff"><svg viewBox="0 0 34 40"><path d="M4 38C6 22 12 8 30 2c-5 9-6 22-2 36z" fill="#F8F5EE"/></svg>Finz</div>
+        </div>
+      </div>
+      <div class="card">
+        <h3>COLOUR PALETTE</h3>
+        <div class="swatches">
+          <div class="sw" style="background:#062C43;color:#fff">#062C43</div>
+          <div class="sw" style="background:#00A6A6;color:#fff">#00A6A6</div>
+          <div class="sw" style="background:#FF7B39;color:#fff">#FF7B39</div>
+          <div class="sw" style="background:#F2E3C6">#F2E3C6</div>
+          <div class="sw" style="background:#F8F5EE;border:1px solid #e5dccb">#F8F5EE</div>
+        </div>
+      </div>
+      <div class="card">
+        <h3>TYPOGRAPHY</h3>
+        <p style="font-family:'Archivo Black';font-size:2rem;text-transform:uppercase">Archivo Black</p>
+        <p style="opacity:.75;margin-bottom:12px">Headlines, packaging and fin artwork</p>
+        <p style="font-weight:700;font-size:1.3rem">Archivo</p>
+        <p style="opacity:.75">Body copy and product specs</p>
+      </div>
+      <div class="card">
+        <h3>TAGLINE &amp; VOICE</h3>
+        <p style="font-family:'Archivo Black';font-size:1.5rem;text-transform:uppercase;margin-bottom:16px">“Built for our swell.”</p>
+        <ul>
+          <li>Talks like a local at the car park, not a catalogue</li>
+          <li>Performance claims backed by real surf testing</li>
+          <li>Respect for the ocean in everything</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="acquire" style="padding-top:0">
+  <div class="wrap">
+    <div class="sale">
+      <div>
+        <div class="eyebrow" style="color:var(--sunset)">Brand for sale</div>
+        <h2>Paddle out with Finz.</h2>
+        <p>A four-letter, ocean-ready .com.au that fits surf hardware, swimwear, a fishing brand or even a finance app. Short, punchy and easy to remember.</p>
+        <a class="btn" href="mailto:sales@finz.com.au?subject=Enquiry%3A%20finz.com.au%20brand">Enquire about Finz</a>
+        <p class="fine">.com.au transfers are subject to auDA eligibility rules (an Australian presence such as an ABN or ACN is required).</p>
+      </div>
+      <ul>
+        <li>Premium domain: finz.com.au</li>
+        <li>Brand name &amp; positioning</li>
+        <li>Fin-wave logo concept</li>
+        <li>Colour palette &amp; typography</li>
+        <li>This ready-to-launch website</li>
+        <li>Product range &amp; copy concepts</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Finz. Brand concept and mockup. Products shown are illustrative.</span>
+    <span>finz.com.au</span>
+  </div>
+</footer>
+
+</body>
+</html>

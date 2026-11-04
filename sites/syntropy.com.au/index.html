@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Syntropy — Regenerative Agroforestry Design | syntropy.com.au</title>
+<meta name="description" content="Syntropy is a ready-to-launch Australian regenerative land and agroforestry brand. The brand and syntropy.com.au domain are available for acquisition.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --forest:#1F3B2D; --forest-2:#2C503D; --moss:#7FA650; --clay:#C96F43; --bone:#F4EFE6; --bark:#4A3B2E; --line:#E0D8C9;
+    --radius:16px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:"Inter",system-ui,sans-serif;background:var(--bone);color:var(--forest);line-height:1.65}
+  a{color:inherit}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 20px}
+  h1,h2,h3,.logo{font-family:"Fraunces",Georgia,serif;font-weight:600;line-height:1.08;letter-spacing:-.01em}
+
+  .sale-bar{background:var(--clay);color:#fff;text-align:center;font-size:.9rem;font-weight:500;padding:10px 16px}
+  .sale-bar a{text-decoration:underline}
+
+  nav{display:flex;justify-content:space-between;align-items:center;padding:24px 0}
+  .logo{font-size:1.7rem;display:flex;align-items:center;gap:10px;text-decoration:none}
+  .logo svg{width:38px;height:38px}
+  nav ul{display:flex;gap:30px;list-style:none;font-weight:500;font-size:.95rem}
+  nav ul a{text-decoration:none;opacity:.75}
+  .btn{display:inline-block;padding:14px 26px;border-radius:999px;font-weight:600;text-decoration:none;transition:transform .15s}
+  .btn:hover{transform:translateY(-2px)}
+  .btn-forest{background:var(--forest);color:var(--bone)}
+  .btn-line{border:1.5px solid var(--forest)}
+
+  .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:50px;align-items:center;padding:40px 0 90px}
+  .hero h1{font-size:clamp(2.6rem,6vw,4.8rem);font-weight:400}
+  .hero h1 em{color:var(--moss);font-style:italic}
+  .hero p{font-size:1.18rem;opacity:.8;max-width:500px;margin:24px 0 30px}
+  .ctas{display:flex;gap:12px;flex-wrap:wrap}
+  .layers{background:var(--forest);border-radius:200px 200px 24px 24px;padding:40px 30px 30px;color:var(--bone)}
+  .layers svg{width:100%;height:auto;display:block}
+  .layers small{display:block;text-align:center;opacity:.7;font-size:.8rem;margin-top:10px}
+
+  section{padding:90px 0}
+  .eyebrow{color:var(--clay);font-weight:600;text-transform:uppercase;letter-spacing:.16em;font-size:.78rem;margin-bottom:12px}
+  h2{font-size:clamp(2rem,4vw,3.1rem);margin-bottom:18px}
+  .lead{font-size:1.12rem;opacity:.8;max-width:640px}
+
+  .principles{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;margin-top:46px}
+  .principles div{background:var(--bone);padding:34px}
+  .principles h3{font-size:1.35rem;margin:12px 0 8px}
+  .principles p{opacity:.78}
+  .principles .ic{width:44px;height:44px}
+
+  .services{background:var(--forest);color:var(--bone)}
+  .svc{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-top:46px}
+  .svc div{background:var(--forest-2);border-radius:var(--radius);padding:32px}
+  .svc h3{font-size:1.4rem;margin-bottom:10px;color:#CFE3B4}
+  .svc p{opacity:.8}
+  .svc .tag{display:inline-block;font-size:.75rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--clay);background:rgba(201,111,67,.15);padding:4px 10px;border-radius:999px;margin-bottom:14px}
+
+  .kit{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:46px}
+  .card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px}
+  .card h3{font-family:"Inter";font-weight:600;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;opacity:.6;margin-bottom:18px}
+  .logos{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .logos div{height:120px;border-radius:12px;display:flex;align-items:center;justify-content:center;gap:10px;font-family:"Fraunces";font-weight:600;font-size:1.7rem}
+  .logos svg{width:40px;height:40px}
+  .swatches{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
+  .sw{height:96px;border-radius:12px;display:flex;align-items:flex-end;padding:8px;font-size:.68rem;font-weight:600}
+  .card li{margin:0 0 10px 18px;opacity:.8}
+
+  .sale{background:var(--forest);color:var(--bone);border-radius:28px;padding:60px;display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:center}
+  .sale ul{list-style:none}
+  .sale li{padding:12px 0;border-bottom:1px solid rgba(244,239,230,.18)}
+  .sale li::before{content:"❧ ";color:var(--moss)}
+  .sale p{opacity:.85;margin:14px 0 24px}
+  .sale .btn{background:var(--clay);color:#fff}
+  .fine{font-size:.82rem;opacity:.65!important;margin-top:16px!important}
+
+  footer{border-top:1px solid var(--line);padding:34px 0;font-size:.88rem;opacity:.75}
+  footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+
+  @media (max-width:900px){
+    .hero,.kit,.sale{grid-template-columns:1fr}
+    .principles,.svc{grid-template-columns:1fr}
+    nav ul{display:none}
+    .sale{padding:34px 22px}
+    .swatches{grid-template-columns:repeat(3,1fr)}
+  }
+</style>
+</head>
+<body>
+
+<div class="sale-bar">The Syntropy brand and syntropy.com.au are for sale. <a href="#acquire">Enquire →</a></div>
+
+<div class="wrap">
+  <nav>
+    <a class="logo" href="#">
+      <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="#1F3B2D"/><path d="M20 31V15" stroke="#F4EFE6" stroke-width="2" stroke-linecap="round"/><path d="M20 22c-5 0-8-3-8-8 5 0 8 3 8 8z" fill="#7FA650"/><path d="M20 18c4 0 7-3 7-7-4 0-7 3-7 7z" fill="#CFE3B4"/><path d="M10 31h20" stroke="#C96F43" stroke-width="2" stroke-linecap="round"/></svg>
+      Syntropy
+    </a>
+    <ul>
+      <li><a href="#approach">Approach</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#brand">Brand kit</a></li>
+    </ul>
+    <a class="btn btn-forest" href="#acquire">Acquire</a>
+  </nav>
+
+  <div class="hero">
+    <div>
+      <div class="eyebrow">Regenerative land design</div>
+      <h1>Land that grows <em>more alive</em> every year.</h1>
+      <p>Syntropy designs and establishes layered agroforestry systems for Australian farms, food forests and backyards, building soil, water and yield all at once.</p>
+      <div class="ctas">
+        <a class="btn btn-forest" href="#services">Our services</a>
+        <a class="btn btn-line" href="#acquire">Buy this brand</a>
+      </div>
+    </div>
+    <div class="layers" aria-hidden="true">
+      <svg viewBox="0 0 300 220">
+        <rect x="0" y="190" width="300" height="30" rx="4" fill="#4A3B2E"/>
+        <g fill="#2C503D"><circle cx="70" cy="70" r="46"/><circle cx="220" cy="60" r="52"/></g>
+        <rect x="68" y="100" width="5" height="92" fill="#4A3B2E"/><rect x="218" y="100" width="5" height="92" fill="#4A3B2E"/>
+        <g fill="#7FA650"><circle cx="145" cy="120" r="32"/><circle cx="35" cy="150" r="22"/><circle cx="270" cy="150" r="20"/></g>
+        <rect x="143" y="140" width="4" height="52" fill="#4A3B2E"/>
+        <g fill="#CFE3B4"><ellipse cx="100" cy="178" rx="20" ry="14"/><ellipse cx="190" cy="180" rx="18" ry="12"/><ellipse cx="250" cy="182" rx="12" ry="9"/></g>
+        <g fill="#C96F43"><circle cx="55" cy="60" r="4"/><circle cx="85" cy="78" r="4"/><circle cx="205" cy="50" r="4"/><circle cx="235" cy="72" r="4"/><circle cx="150" cy="112" r="3.5"/></g>
+      </svg>
+      <small>Emergent · High · Medium · Low · Ground cover</small>
+    </div>
+  </div>
+</div>
+
+<section id="approach" style="padding-top:20px">
+  <div class="wrap">
+    <div class="eyebrow">Our approach</div>
+    <h2>Work with nature's order, not against it.</h2>
+    <p class="lead">Entropy is the drift towards disorder. Syntropy is the opposite: living systems that build complexity, fertility and resilience over time. That's what we design for.</p>
+    <div class="principles">
+      <div><svg class="ic" viewBox="0 0 44 44"><circle cx="22" cy="22" r="21" fill="#E7EFDB"/><path d="M12 30h20M15 30V20M22 30V14M29 30V24" stroke="#1F3B2D" stroke-width="2.4" stroke-linecap="round"/></svg><h3>Stratification</h3><p>Plants are layered by height and light needs so every level of the canopy is productive.</p></div>
+      <div><svg class="ic" viewBox="0 0 44 44"><circle cx="22" cy="22" r="21" fill="#F6E3D8"/><path d="M14 22a8 8 0 0 1 14-5M30 22a8 8 0 0 1-14 5" stroke="#C96F43" stroke-width="2.4" fill="none" stroke-linecap="round"/><path d="M28 13v4h-4M16 31v-4h4" stroke="#C96F43" stroke-width="2.4" fill="none" stroke-linecap="round"/></svg><h3>Succession</h3><p>Pioneer species prepare the ground for long-lived trees, just as a forest does on its own.</p></div>
+      <div><svg class="ic" viewBox="0 0 44 44"><circle cx="22" cy="22" r="21" fill="#E7EFDB"/><path d="M22 12c-6 8-8 12-8 15a8 8 0 0 0 16 0c0-3-2-7-8-15z" fill="#7FA650"/></svg><h3>Pruning for soil</h3><p>Strategic chop-and-drop feeds organic matter back to the soil and keeps water in the ground.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="eyebrow">Services</div>
+    <h2>From paddock to food forest.</h2>
+    <div class="svc">
+      <div><span class="tag">Farms</span><h3>Whole-farm design</h3><p>Site analysis, water planning and staged agroforestry rows integrated with your existing operation.</p></div>
+      <div><span class="tag">Councils &amp; groups</span><h3>Community food forests</h3><p>Design, planting days and maintenance plans for public and shared land.</p></div>
+      <div><span class="tag">Homes</span><h3>Backyard syntropic gardens</h3><p>High-yield, low-maintenance gardens built from the same principles, at a household scale.</p></div>
+      <div><span class="tag">Learning</span><h3>Workshops &amp; courses</h3><p>Hands-on field days and online courses for growers who want to do it themselves.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="brand">
+  <div class="wrap">
+    <div class="eyebrow">Brand identity concept</div>
+    <h2>The Syntropy brand kit</h2>
+    <p class="lead">Earthy, considered and quietly confident. A growing seedling sits on a line of soil, a simple mark that says “we build from the ground up.”</p>
+    <div class="kit">
+      <div class="card">
+        <h3>Logo</h3>
+        <div class="logos">
+          <div style="background:var(--bone);border:1px solid var(--line)"><svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="19" fill="#1F3B2D"/><path d="M20 31V15" stroke="#F4EFE6" stroke-width="2" stroke-linecap="round"/><path d="M20 22c-5 0-8-3-8-8 5 0 8 3 8 8z" fill="#7FA650"/><path d="M20 18c4 0 7-3 7-7-4 0-7 3-7 7z" fill="#CFE3B4"/><path d="M10 31h20" stroke="#C96F43" stroke-width="2" stroke-linecap="round"/></svg>Syntropy</div>
+          <div style="background:var(--forest);color:var(--bone)">Syntropy</div>
+          <div style="background:var(--moss)"><svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="19" fill="#1F3B2D"/><path d="M20 31V15" stroke="#F4EFE6" stroke-width="2" stroke-linecap="round"/><path d="M20 22c-5 0-8-3-8-8 5 0 8 3 8 8z" fill="#7FA650"/><path d="M20 18c4 0 7-3 7-7-4 0-7 3-7 7z" fill="#CFE3B4"/><path d="M10 31h20" stroke="#C96F43" stroke-width="2" stroke-linecap="round"/></svg></div>
+          <div style="background:var(--clay);color:#fff;font-style:italic">syntropy</div>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Colour palette</h3>
+        <div class="swatches">
+          <div class="sw" style="background:#1F3B2D;color:#fff">#1F3B2D</div>
+          <div class="sw" style="background:#7FA650;color:#fff">#7FA650</div>
+          <div class="sw" style="background:#C96F43;color:#fff">#C96F43</div>
+          <div class="sw" style="background:#4A3B2E;color:#fff">#4A3B2E</div>
+          <div class="sw" style="background:#F4EFE6;border:1px solid var(--line)">#F4EFE6</div>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Typography</h3>
+        <p style="font-family:Fraunces;font-size:2rem">Fraunces <em>Italic</em></p>
+        <p style="opacity:.75;margin-bottom:12px">Headlines with an organic, old-style warmth</p>
+        <p style="font-weight:600;font-size:1.3rem">Inter</p>
+        <p style="opacity:.75">Body copy, reports and site plans</p>
+      </div>
+      <div class="card">
+        <h3>Tagline &amp; voice</h3>
+        <p style="font-family:Fraunces;font-size:1.5rem;margin-bottom:16px">“Grow abundance.”</p>
+        <ul>
+          <li>Grounded and knowledgeable, never preachy</li>
+          <li>Talks in outcomes: soil, water, yield</li>
+          <li>Respects Country and traditional land knowledge</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="acquire" style="padding-top:0">
+  <div class="wrap">
+    <div class="sale">
+      <div>
+        <div class="eyebrow" style="color:#CFE3B4">Brand for sale</div>
+        <h2>Plant your business in Syntropy.</h2>
+        <p>A distinctive, meaningful single-word .com.au. It suits regenerative agriculture, sustainability consulting, wellness, or a tech or design studio built around order and systems thinking.</p>
+        <a class="btn" href="mailto:sales@syntropy.com.au?subject=Enquiry%3A%20syntropy.com.au%20brand">Enquire about Syntropy</a>
+        <p class="fine">.com.au transfers are subject to auDA eligibility rules (an Australian presence such as an ABN or ACN is required).</p>
+      </div>
+      <ul>
+        <li>Premium domain: syntropy.com.au</li>
+        <li>Brand name &amp; positioning</li>
+        <li>Seedling logo concept</li>
+        <li>Colour palette &amp; typography</li>
+        <li>This ready-to-launch website</li>
+        <li>Service &amp; copy concepts</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Syntropy. Brand concept and mockup. Services shown are illustrative.</span>
+    <span>syntropy.com.au</span>
+  </div>
+</footer>
+
+</body>
+</html>

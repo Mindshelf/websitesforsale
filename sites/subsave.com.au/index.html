@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SubSave — Track &amp; Cancel Subscriptions | subsave.com.au</title>
+<meta name="description" content="SubSave is a ready-to-launch Australian subscription-tracking brand. The brand and subsave.com.au domain are available for acquisition.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0E1A2B; --ink-2:#18283F; --mint:#2EE59D; --mint-d:#12B878; --sky:#EAF7F1; --white:#fff; --muted:#5B6B80; --line:#E3E9F0;
+    --radius:20px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:"Plus Jakarta Sans",system-ui,sans-serif;color:var(--ink);background:var(--white);line-height:1.6}
+  a{color:inherit}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 20px}
+  h1,h2,h3{line-height:1.1;letter-spacing:-.03em;font-weight:800}
+
+  .sale-bar{background:var(--ink);color:#fff;text-align:center;font-size:.9rem;padding:10px 16px;font-weight:500}
+  .sale-bar b{color:var(--mint)}
+  .sale-bar a{color:var(--mint)}
+
+  nav{display:flex;justify-content:space-between;align-items:center;padding:22px 0}
+  .logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.45rem;text-decoration:none;letter-spacing:-.03em}
+  .logo svg{width:36px;height:36px}
+  .logo span span{color:var(--mint-d)}
+  nav ul{display:flex;gap:28px;list-style:none;font-weight:500;color:var(--muted)}
+  nav ul a{text-decoration:none}
+  .btn{display:inline-block;padding:14px 24px;border-radius:12px;font-weight:700;text-decoration:none;transition:transform .15s}
+  .btn:hover{transform:translateY(-2px)}
+  .btn-mint{background:var(--mint);color:var(--ink)}
+  .btn-dark{background:var(--ink);color:#fff}
+  .btn-line{border:1.5px solid var(--line)}
+
+  .hero{display:grid;grid-template-columns:1.05fr .95fr;gap:50px;align-items:center;padding:50px 0 90px}
+  .pill{display:inline-block;background:var(--sky);color:var(--mint-d);font-weight:700;font-size:.8rem;padding:6px 12px;border-radius:999px;margin-bottom:18px}
+  .hero h1{font-size:clamp(2.5rem,5.5vw,4.4rem)}
+  .hero h1 span{background:linear-gradient(transparent 60%,var(--mint) 60%)}
+  .hero p{font-size:1.2rem;color:var(--muted);margin:22px 0 30px;max-width:500px}
+  .ctas{display:flex;gap:12px;flex-wrap:wrap}
+
+  .phone{background:var(--ink);border-radius:40px;padding:14px;max-width:340px;margin:0 auto;box-shadow:0 40px 80px rgba(14,26,43,.25)}
+  .screen{background:#F6F9FC;border-radius:28px;padding:22px 18px}
+  .screen .tot{background:var(--ink);color:#fff;border-radius:18px;padding:18px;margin-bottom:16px}
+  .screen .tot small{opacity:.7;font-size:.75rem}
+  .screen .tot b{display:block;font-size:2rem;letter-spacing:-.03em}
+  .screen .tot .save{color:var(--mint);font-weight:700;font-size:.85rem}
+  .sub{display:flex;align-items:center;gap:12px;background:#fff;border-radius:14px;padding:12px;margin-bottom:10px;font-size:.88rem}
+  .sub .ic{width:34px;height:34px;border-radius:10px;display:grid;place-items:center;color:#fff;font-weight:800}
+  .sub .nm{flex:1}
+  .sub .nm small{display:block;color:var(--muted);font-size:.72rem}
+  .sub .x{background:#FFE8E8;color:#D93838;font-weight:700;font-size:.72rem;padding:5px 9px;border-radius:8px}
+  .sub .k{background:var(--sky);color:var(--mint-d);font-weight:700;font-size:.72rem;padding:5px 9px;border-radius:8px}
+
+  section{padding:90px 0}
+  .eyebrow{color:var(--mint-d);font-weight:700;text-transform:uppercase;letter-spacing:.12em;font-size:.8rem;margin-bottom:10px}
+  h2{font-size:clamp(2rem,4vw,2.9rem);margin-bottom:16px}
+  .lead{color:var(--muted);font-size:1.12rem;max-width:620px}
+  .center{text-align:center}.center .lead{margin:0 auto}
+
+  .features{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:48px}
+  .feat{border:1px solid var(--line);border-radius:var(--radius);padding:30px}
+  .feat .i{width:48px;height:48px;border-radius:14px;background:var(--sky);display:grid;place-items:center;margin-bottom:18px}
+  .feat .i svg{width:24px;height:24px;stroke:var(--mint-d);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .feat h3{font-size:1.2rem;margin-bottom:8px}
+  .feat p{color:var(--muted)}
+
+  .band{background:var(--ink);color:#fff}
+  .band .lead{color:#A9B6C7}
+  .calc{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:44px}
+  .calc div{background:var(--ink-2);border-radius:var(--radius);padding:28px}
+  .calc b{font-size:2.4rem;color:var(--mint);letter-spacing:-.03em;display:block}
+  .calc span{color:#A9B6C7}
+
+  .kit{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:44px}
+  .card{border:1px solid var(--line);border-radius:var(--radius);padding:28px}
+  .card h3{font-size:.85rem;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin-bottom:18px}
+  .logos{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .logos div{height:120px;border-radius:14px;display:flex;align-items:center;justify-content:center;gap:10px;font-weight:800;font-size:1.6rem;letter-spacing:-.03em}
+  .logos svg{width:40px;height:40px}
+  .swatches{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+  .sw{height:96px;border-radius:14px;display:flex;align-items:flex-end;padding:8px;font-size:.72rem;font-weight:700}
+  .card li{margin:0 0 10px 18px;color:var(--muted)}
+
+  .sale{border-radius:28px;background:linear-gradient(135deg,var(--mint),#9BF5CF);padding:60px;display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:center}
+  .sale ul{list-style:none;background:#fff;border-radius:var(--radius);padding:10px 26px}
+  .sale li{padding:13px 0;border-bottom:1px solid var(--line);font-weight:500}
+  .sale li:last-child{border:0}
+  .sale li::before{content:"✓";color:var(--mint-d);font-weight:800;margin-right:10px}
+  .sale p{margin:14px 0 24px}
+  .fine{font-size:.82rem;opacity:.75;margin-top:16px!important}
+
+  footer{border-top:1px solid var(--line);padding:34px 0;color:var(--muted);font-size:.88rem}
+  footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+
+  @media (max-width:900px){
+    .hero,.kit,.sale{grid-template-columns:1fr}
+    .features,.calc{grid-template-columns:1fr}
+    nav ul{display:none}
+    .sale{padding:34px 22px}
+  }
+</style>
+</head>
+<body>
+
+<div class="sale-bar"><b>For sale:</b> the SubSave brand and subsave.com.au. <a href="#acquire">Enquire →</a></div>
+
+<div class="wrap">
+  <nav>
+    <a class="logo" href="#">
+      <svg viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="12" fill="#0E1A2B"/><path d="M27 14.5c-1.4-1.6-3.6-2.5-6.2-2.5-3.7 0-6.3 1.9-6.3 4.6 0 6 12.6 3.3 12.6 9 0 2.7-2.7 4.4-6.4 4.4-2.8 0-5.2-1-6.7-2.8" stroke="#2EE59D" stroke-width="3.2" fill="none" stroke-linecap="round"/><path d="M20 9v3M20 30v3" stroke="#2EE59D" stroke-width="3.2" stroke-linecap="round"/></svg>
+      <span>Sub<span>Save</span></span>
+    </a>
+    <ul>
+      <li><a href="#features">Features</a></li>
+      <li><a href="#savings">Savings</a></li>
+      <li><a href="#brand">Brand kit</a></li>
+    </ul>
+    <a class="btn btn-dark" href="#acquire">Buy this brand</a>
+  </nav>
+
+  <div class="hero">
+    <div>
+      <span class="pill">Made for Australian bank accounts</span>
+      <h1>Stop paying for things you <span>forgot about.</span></h1>
+      <p>SubSave finds every subscription hiding in your bank statements, reminds you before renewals and helps you cancel the ones you don't use, all in one tap.</p>
+      <div class="ctas">
+        <a class="btn btn-mint" href="#features">See how it works</a>
+        <a class="btn btn-line" href="#acquire">Acquire SubSave</a>
+      </div>
+    </div>
+    <div class="phone" aria-hidden="true">
+      <div class="screen">
+        <div class="tot"><small>Monthly subscriptions</small><b>$187.40</b><span class="save">You could save $64.98/mo</span></div>
+        <div class="sub"><div class="ic" style="background:#E50914">S</div><div class="nm">Streaming Plus<small>Renews in 3 days · $22.99</small></div><span class="k">Keep</span></div>
+        <div class="sub"><div class="ic" style="background:#7B61FF">F</div><div class="nm">FitLife Gym<small>Not used in 64 days · $34.99</small></div><span class="x">Cancel</span></div>
+        <div class="sub"><div class="ic" style="background:#1DB954">M</div><div class="nm">Music Premium<small>Renews in 12 days · $13.99</small></div><span class="k">Keep</span></div>
+        <div class="sub"><div class="ic" style="background:#FF9900">C</div><div class="nm">Cloud Storage 2TB<small>Duplicate plan found · $15.99</small></div><span class="x">Cancel</span></div>
+        <div class="sub"><div class="ic" style="background:#0E1A2B">N</div><div class="nm">News Digital<small>Free trial ends tomorrow · $14.00</small></div><span class="x">Cancel</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section id="features" style="background:#F6F9FC">
+  <div class="wrap center">
+    <div class="eyebrow">Features</div>
+    <h2>Your subscriptions, finally under control.</h2>
+    <p class="lead">Connect your bank securely and SubSave does the rest.</p>
+    <div class="features" style="text-align:left">
+      <div class="feat"><div class="i"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></div><h3>Auto-detect</h3><p>Scans your transactions to surface every recurring charge, including the sneaky annual ones.</p></div>
+      <div class="feat"><div class="i"><svg viewBox="0 0 24 24"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg></div><h3>Renewal alerts</h3><p>Get a heads-up before free trials convert and before annual plans renew.</p></div>
+      <div class="feat"><div class="i"><svg viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></svg></div><h3>One-tap cancel</h3><p>Step-by-step cancel guides for popular services, so you're not stuck on hold.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="savings">
+  <div class="wrap">
+    <div class="eyebrow">Why it matters</div>
+    <h2>Small charges add up fast.</h2>
+    <p class="lead">A few forgotten subscriptions can quietly cost hundreds of dollars a year. SubSave puts that money back in your pocket.</p>
+    <div class="calc">
+      <div><b>$15</b><span>a month on a forgotten app</span></div>
+      <div><b>$180</b><span>gone in a year</span></div>
+      <div><b>1 tap</b><span>to stop it with SubSave</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="brand">
+  <div class="wrap">
+    <div class="eyebrow">Brand identity concept</div>
+    <h2>The SubSave brand kit</h2>
+    <p class="lead">Clean, trustworthy fintech with a friendly edge. Mint green signals money saved and the $ shape becomes an S.</p>
+    <div class="kit">
+      <div class="card">
+        <h3>Logo</h3>
+        <div class="logos">
+          <div style="background:#fff;border:1px solid var(--line)"><svg viewBox="0 0 40 40"><rect width="40" height="40" rx="12" fill="#0E1A2B"/><path d="M27 14.5c-1.4-1.6-3.6-2.5-6.2-2.5-3.7 0-6.3 1.9-6.3 4.6 0 6 12.6 3.3 12.6 9 0 2.7-2.7 4.4-6.4 4.4-2.8 0-5.2-1-6.7-2.8" stroke="#2EE59D" stroke-width="3.2" fill="none" stroke-linecap="round"/><path d="M20 9v3M20 30v3" stroke="#2EE59D" stroke-width="3.2" stroke-linecap="round"/></svg>SubSave</div>
+          <div style="background:var(--ink);color:#fff"><span>Sub<span style="color:var(--mint)">Save</span></span></div>
+          <div style="background:var(--mint)"><svg viewBox="0 0 40 40"><rect width="40" height="40" rx="12" fill="#0E1A2B"/><path d="M27 14.5c-1.4-1.6-3.6-2.5-6.2-2.5-3.7 0-6.3 1.9-6.3 4.6 0 6 12.6 3.3 12.6 9 0 2.7-2.7 4.4-6.4 4.4-2.8 0-5.2-1-6.7-2.8" stroke="#2EE59D" stroke-width="3.2" fill="none" stroke-linecap="round"/><path d="M20 9v3M20 30v3" stroke="#2EE59D" stroke-width="3.2" stroke-linecap="round"/></svg></div>
+          <div style="background:var(--sky);color:var(--ink)">subsave</div>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Colour palette</h3>
+        <div class="swatches">
+          <div class="sw" style="background:#0E1A2B;color:#fff">#0E1A2B</div>
+          <div class="sw" style="background:#2EE59D">#2EE59D</div>
+          <div class="sw" style="background:#12B878;color:#fff">#12B878</div>
+          <div class="sw" style="background:#EAF7F1">#EAF7F1</div>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Typography</h3>
+        <p style="font-size:2rem;font-weight:800;letter-spacing:-.03em">Plus Jakarta Sans</p>
+        <p style="color:var(--muted)">One modern, highly legible family for app UI, web and marketing, from ExtraBold headlines down to Regular body text.</p>
+      </div>
+      <div class="card">
+        <h3>Tagline &amp; voice</h3>
+        <p style="font-size:1.4rem;font-weight:800;margin-bottom:16px">“Subscribe smarter.”</p>
+        <ul>
+          <li>Plain English, no finance jargon</li>
+          <li>On your side, never preachy about spending</li>
+          <li>Shows the dollar amount, every time</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="acquire" style="padding-top:0">
+  <div class="wrap">
+    <div class="sale">
+      <div>
+        <div class="eyebrow" style="color:var(--ink)">Brand for sale</div>
+        <h2>Launch SubSave under your name.</h2>
+        <p>A descriptive, brandable .com.au for a subscription manager, a savings app, a comparison site or a bank's fintech add-on. The name explains the product before anyone clicks.</p>
+        <a class="btn btn-dark" href="mailto:sales@subsave.com.au?subject=Enquiry%3A%20subsave.com.au%20brand">Enquire about SubSave</a>
+        <p class="fine">.com.au transfers are subject to auDA eligibility rules (an Australian presence such as an ABN or ACN is required).</p>
+      </div>
+      <ul>
+        <li>Premium domain: subsave.com.au</li>
+        <li>Brand name &amp; positioning</li>
+        <li>Logo &amp; identity concept</li>
+        <li>Colour palette &amp; typography</li>
+        <li>This ready-to-launch website</li>
+        <li>App UI &amp; copy concepts</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 SubSave. Brand concept and mockup. App screens and figures are illustrative.</span>
+    <span>subsave.com.au</span>
+  </div>
+</footer>
+
+</body>
+</html>
